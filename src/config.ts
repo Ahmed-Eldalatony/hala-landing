@@ -1,0 +1,1 @@
+// Config is now in component to use window

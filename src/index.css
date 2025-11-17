@@ -1,0 +1,527 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.5527 0.291399 302.2592);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(64.6% 0.222 41.116);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  --shadow-card: 0 4px 20px -4px hsl(240 9% 7% / 0.08);
+
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-glow-color: oklch(0.73 0.18 45 / 0.3);
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    oklch(0.6 0.2 240) 0%,
+    oklch(0.7 0.25 240) 100%
+  );
+  --gradient-secondary: linear-gradient(
+    135deg,
+    hsl(268 91% 27%) 0%,
+    hsl(268 80% 35%) 100%
+  );
+  --gradient-hero: linear-gradient(
+    180deg,
+    hsl(210 14% 97%) 0%,
+    hsl(220 20% 95%) 100%
+  );
+
+  /* other */
+  --hala-purple: 263 40% 94%;
+  --hala-purple-text: 263 91% 26%;
+  --hala-orange: 23 92% 90%;
+  --hala-orange-text: 23 92% 40%;
+  --hala-blue: 213 94% 90%;
+  --hala-blue-text: 213 94% 40%;
+  --hala-yellow: 45 93% 88%;
+  --hala-yellow-text: 45 93% 35%;
+  --hala-green: 142 72% 88%;
+  --hala-green-text: 142 72% 29%;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.4485 0.2226 263.27);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    @apply bg-background text-foreground font-semibold;
+  }
+
+  input[type="date"]::before {
+    content: attr(placeholder);
+    position: absolute;
+    color: gray;
+  }
+
+  input[type="date"]:valid::before {
+    content: "";
+  }
+
+  input[type="date"]:invalid::before {
+    content: attr(placeholder);
+    color: #9ca3af; /* لون رمادي */
+    margin-left: 4px;
+  }
+
+  .PhoneInput {
+    @apply flex flex-row-reverse items-center gap-0 space-x-0;
+  }
+  .PhoneInput > div {
+    @apply h-10 dark:bg-input/30 border-input bg-transparent px-3 py-1 text-base shadow-xs !m-0;
+  }
+  .PhoneInputInput {
+    @apply h-10 !rounded-none !rounded-e-md file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm;
+  }
+
+  .PhoneInputCountry {
+    @apply !rounded-none !rounded-e-md border border-s-0;
+  }
+  .PhoneInputCountrySelectArrow {
+    display: none !important;
+  }
+  .lazy-load-image-background {
+    @apply h-full w-full;
+  }
+
+  .lucide {
+    @apply rtl:!-rotate-x-360;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply antialiased bg-background text-foreground;
+  }
+
+  /* RTL Support */
+  [dir="rtl"] {
+    direction: rtl;
+  }
+
+  [dir="rtl"] .space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
+  }
+
+  .PhoneInput {
+    @apply flex flex-row-reverse items-center [&>div]:border;
+  }
+  .PhoneInput > div {
+    @apply h-10 dark:bg-input/30 border-input rounded-md border bg-transparent px-3 py-1 text-base shadow-xs;
+  }
+  .PhoneInputInput {
+    @apply h-10 file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm;
+  }
+
+  /* Arabic Typography */
+  .font-arabic {
+    font-family: "Cairo", sans-serif;
+    font-feature-settings:
+      "liga" 1,
+      "kern" 1;
+  }
+
+  /* Custom scrollbar for RTL */
+  [dir="rtl"] ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  [dir="rtl"] ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  [dir="rtl"] ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+  }
+
+  [dir="rtl"] ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+
+  /* Form elements RTL */
+  [dir="rtl"] input[type="text"],
+  [dir="rtl"] input[type="email"],
+  [dir="rtl"] input[type="password"],
+  [dir="rtl"] input[type="number"],
+  [dir="rtl"] textarea,
+  [dir="rtl"] select {
+    text-align: right;
+  }
+
+  /* Table RTL */
+  [dir="rtl"] table {
+    text-align: right;
+  }
+
+  [dir="rtl"] th,
+  [dir="rtl"] td {
+    text-align: right;
+  }
+
+  /* Navigation RTL */
+  [dir="rtl"] .nav-item {
+    flex-direction: row-reverse;
+  }
+
+  /* Badge and pill elements */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    border-radius: calc(var(--radius) - 2px);
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+    padding: 0.25rem 0.5rem;
+  }
+
+  /* Status colors for Arabic interface */
+  .status-received {
+    @apply bg-gray-100 text-gray-800;
+  }
+
+  .status-confirming {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+
+  .status-confirmed {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  .status-prepared {
+    @apply bg-purple-100 text-purple-800;
+  }
+
+  .status-shipped {
+    @apply bg-orange-100 text-orange-800;
+  }
+
+  .status-delivered {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .status-returned,
+  .status-failed {
+    @apply bg-red-100 text-red-800;
+  }
+
+  /* Custom animations for Arabic interface */
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.3s ease-out;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.3s ease-out;
+  }
+
+  /* RTL-specific utility classes */
+  .rtl\:mr-auto:where([dir="rtl"], [dir="rtl"] *) {
+    margin-right: auto;
+  }
+
+  .rtl\:ml-auto:where([dir="rtl"], [dir="rtl"] *) {
+    margin-left: auto;
+  }
+
+  .rtl\:text-right:where([dir="rtl"], [dir="rtl"] *) {
+    text-align: right;
+  }
+
+  .rtl\:text-left:where([dir="rtl"], [dir="rtl"] *) {
+    text-align: left;
+  }
+
+  [dir="rtl"] .lucide {
+    transform: scaleX(-1);
+  }
+
+  [dir="rtl"] .lucide-chevron-left,
+  [dir="rtl"] .lucide-chevron-right,
+  [dir="rtl"] .lucide-arrow-left,
+  [dir="rtl"] .lucide-arrow-right {
+    transform: scaleX(-1);
+  }
+
+  /* Dashboard specific styles */
+  .dashboard-card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6;
+  }
+
+  .stat-card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6;
+  }
+
+  .stat-card .stat-icon {
+    @apply p-3 rounded-lg;
+  }
+
+  .stat-card .stat-value {
+    @apply text-2xl font-bold text-gray-900 mt-1;
+  }
+
+  .stat-card .stat-change {
+    @apply text-sm mt-1 flex items-center gap-1;
+  }
+
+  /* Table improvements for Arabic */
+  .data-table {
+    @apply w-full;
+  }
+
+  .data-table th {
+    @apply px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider border-b border-gray-200;
+  }
+
+  .data-table td {
+    @apply px-6 py-4 whitespace-nowrap text-sm text-gray-900 border-b border-gray-200;
+  }
+
+  /* Form improvements */
+  .form-group {
+    @apply space-y-2;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+
+  .form-input {
+    @apply block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary focus:border-primary;
+  }
+  /* Navigation improvements */
+  .nav-link {
+    @apply flex items-center gap-3 px-4 py-3 rounded-lg transition-colors font-medium;
+  }
+
+  .nav-link.active {
+    @apply text-primary;
+    background-color: hsl(var(--primary) / 0.1);
+    border: 1px solid hsl(var(--primary) / 0.2);
+  }
+
+  .nav-link:not(.active) {
+    @apply text-gray-700 hover:bg-gray-50;
+  }
+
+  /* Custom utility classes for opacity */
+  .bg-primary-10 {
+    background-color: hsl(var(--primary) / 0.1);
+  }
+}
+
+/* Hala Commerce Custom Colors - #340781 & #fe5817 */
+.bg-hala-primary {
+  background-color: #340781 !important;
+}
+.hover\:bg-hala-primary:hover {
+  background-color: #2a0668 !important;
+}
+.text-hala-primary {
+  color: #340781 !important;
+}
+.border-hala-primary {
+  border-color: #340781 !important;
+}
+
+.bg-hala-secondary {
+  background-color: #fe5817 !important;
+}
+.hover\:bg-hala-secondary:hover {
+  background-color: #e54d14 !important;
+}
+.text-hala-secondary {
+  color: #fe5817 !important;
+}
+.border-hala-secondary {
+  border-color: #fe5817 !important;
+}
+.center {
+  @apply flex items-center justify-center;
+}
+
+.landing-theme {
+  --primary: oklch(0.5527 0.291399 302.2592);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(64.6% 0.222 41.116);
+  --secondary-foreground: oklch(1 0 0);
+  --accent: oklch(0.5527 0.291399 302.2592);
+  --accent-foreground: oklch(1 0 0);
+  --ring: oklch(0.5527 0.291399 302.2592);
+  --gradient-primary: linear-gradient(
+    135deg,
+    hsl(14 99% 54%) 0%,
+    hsl(14 100% 64%) 100%
+  );
+  --gradient-secondary: linear-gradient(
+    135deg,
+    hsl(268 91% 27%) 0%,
+    hsl(268 80% 35%) 100%
+  );
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50 shadow-card;
+  }
+}
+.shadow-glow {
+  box-shadow: 0 10px 40px -10px var(--shadow-glow-color);
+}
+.shadow-hover-glow:hover {
+  box-shadow: 0 10px 40px -10px var(--shadow-glow-color);
+}
