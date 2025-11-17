@@ -7,4 +7,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  preview: {
+    allowedHosts: ['seller.halakommers.com', 'admin.halakommers.com']
+  },
 });
