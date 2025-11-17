@@ -224,7 +224,7 @@
 
   /* Arabic Typography */
   .font-arabic {
-    font-family: "Cairo", sans-serif;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
     font-feature-settings:
       "liga" 1,
       "kern" 1;
