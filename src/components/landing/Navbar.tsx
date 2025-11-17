@@ -7,7 +7,7 @@ interface NavbarProps {
 }
 
 const Navbar = ({ showNavItems = true }: NavbarProps) => {
-  const appUrl = window.location.origin || 'https://halakommers.com';
+  const appUrl = typeof window !== 'undefined' ? window.location.origin : 'https://halakommers.com';
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 

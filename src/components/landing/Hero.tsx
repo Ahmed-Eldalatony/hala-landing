@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Check, MessageCircle } from "lucide-react"
-import heroDashboard from "/hala-landing.png"
+const heroDashboard = "/hala-landing.png"
 const Hero = () => {
   const benefits = [
     "توصيل أسرع + مرتجعات أقل",

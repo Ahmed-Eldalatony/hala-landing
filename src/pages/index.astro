@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/landing/Navbar.tsx';
+import Hero from '../components/landing/Hero.tsx';
+import SocialProof from '../components/landing/SocialProof.tsx';
+import Services from '../components/landing/Services.tsx';
+import Coverage from '../components/landing/Coverage.tsx';
+import HowItWorks from '../components/landing/HowItWorks.tsx';
+import UseCases from '../components/landing/UseCases.tsx';
+import Testimonials from '../components/landing/Testimonials.tsx';
+import Faq from '../components/landing/Faq.tsx';
+import FinalCTA from '../components/landing/FinalCTA.tsx';
+import Footer from '../components/landing/Footer.tsx';
+import MobileCTA from '../components/landing/MobileCTA.tsx';
+---
+
+<Layout title="Hala Landing">
+  <Navbar client:load />
+  <main>
+    <Hero />
+    <SocialProof />
+    <Services />
+    <Coverage />
+    <HowItWorks />
+    <UseCases />
+    <Testimonials />
+    <Faq />
+    <FinalCTA />
+  </main>
+  <Footer />
+  <MobileCTA />
+</Layout>
