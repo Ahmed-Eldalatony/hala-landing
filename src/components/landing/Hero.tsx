@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Check, MessageCircle } from "lucide-react"
 const heroDashboard = "/hala-landing.png"
 const Hero = () => {
+  const appUrl = typeof window !== 'undefined' ? `https://seller.${window.location.hostname}` : 'https://seller.halakommers.com';
   const benefits = [
     "توصيل أسرع + مرتجعات أقل",
     "لوحة تحكم عربية بسيطة",
@@ -62,7 +63,16 @@ const Hero = () => {
                 size="lg"
                 className="shadow-glow  rounded-xl transition-smooth text-lg px-8 h-14"
               >
-                سجّل الآن
+
+
+  <a
+              href={`${appUrl}/auth/register`}
+              className=""
+            >
+              سجّل الآن
+            </a>
+
+
               </Button>
               <Button
                 variant="outline"

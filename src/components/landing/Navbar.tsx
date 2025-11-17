@@ -7,7 +7,7 @@ interface NavbarProps {
 }
 
 const Navbar = ({ showNavItems = true }: NavbarProps) => {
-  const appUrl = typeof window !== 'undefined' ? window.location.origin : 'https://halakommers.com';
+  const appUrl = typeof window !== 'undefined' ? `https://seller.${window.location.hostname}` : 'https://seller.halakommers.com';
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -59,13 +59,13 @@ const Navbar = ({ showNavItems = true }: NavbarProps) => {
 
           <div className="flex items-center gap-3">
             <a
-              href={`${appUrl}/login`}
+              href={`${appUrl}/auth/login`}
               className="hidden hover:bg-secondary rounded-xl md:inline-flex px-4 py-2 text-sm font-medium"
             >
               دخول
             </a>
             <a
-              href={`${appUrl}/register`}
+              href={`${appUrl}/auth/register`}
               className="bg-secondary text-secondary-foreground shadow-glow rounded-xl transition-smooth px-4 py-2 text-sm font-medium"
             >
               سجّل الآن
@@ -95,12 +95,12 @@ const Navbar = ({ showNavItems = true }: NavbarProps) => {
                     {item.label}
                   </a>
                 ))}
-              <a
-                href={`${appUrl}/login`}
-                className="w-full justify-start px-4 py-2 text-sm font-medium"
-              >
-                دخول
-              </a>
+               <a
+                 href={`${appUrl}/auth/login`}
+                 className="w-full justify-start px-4 py-2 text-sm font-medium"
+               >
+                 دخول
+               </a>
             </div>
           </div>
         )}
