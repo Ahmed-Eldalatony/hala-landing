@@ -12,6 +12,11 @@ export default defineConfig({
     },
   },
   server: {
-    allowedHosts: ['seller.halakommers.com', 'admin.halakommers.com']
+    allowedHosts: [
+      "halakommers.com",
+      "seller.halakommers.com",
+      "admin.halakommers.com",
+      "api.halakommers.com",
+    ],
   },
 });
