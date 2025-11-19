@@ -22,6 +22,7 @@ export default defineConfig({
     ],
   },
   preview: {
+    host: true,
     allowedHosts: [
       "seller.halakommers.com",
       "halakommers.com",
