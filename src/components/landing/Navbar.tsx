@@ -1,13 +1,17 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Logo from "@/components/Logo";
+import { Button } from "../ui/button";
 
 interface NavbarProps {
   showNavItems?: boolean;
 }
 
 const Navbar = ({ showNavItems = true }: NavbarProps) => {
-  const appUrl = typeof window !== 'undefined' ? `https://seller.${window.location.hostname}` : 'https://seller.halakommers.com';
+  const appUrl =
+    typeof window !== "undefined"
+      ? `https://seller.${window.location.hostname}`
+      : "https://seller.halakommers.com";
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -82,7 +86,7 @@ const Navbar = ({ showNavItems = true }: NavbarProps) => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border">
+          <div className="lg:hidden p-4  rounded-md border-t border-border bg-card">
             <div className="flex flex-col gap-4">
               {showNavItems &&
                 navItems.map((item) => (
@@ -95,12 +99,6 @@ const Navbar = ({ showNavItems = true }: NavbarProps) => {
                     {item.label}
                   </a>
                 ))}
-               <a
-                 href={`${appUrl}/auth/login`}
-                 className="w-full justify-start px-4 py-2 text-sm font-medium"
-               >
-                 دخول
-               </a>
             </div>
           </div>
         )}

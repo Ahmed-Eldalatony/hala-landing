@@ -36,7 +36,7 @@ const Footer = () => {
             <div className="flex gap-4">
               <a
                 href="#"
-                className="w-10 h-10 rounded-lg bg-muted hover:bg-primary hover:text-white transition-smooth flex items-center justify-center"
+                className="w-10 h-10 rounded-lg bg-muted hover:bg-primary hover:text-white transition-smooth flex items-center justify-center cursor-pointer"
               >
                 <MessageCircle className="w-5 h-5" />
               </a>
@@ -51,7 +51,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-muted-foreground hover:text-secondary transition-smooth"
+                    className="text-muted-foreground hover:text-secondary transition-smooth cursor-pointer"
                   >
                     {link.label}
                   </a>
@@ -68,7 +68,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-muted-foreground hover:text-secondary transition-smooth"
+                    className="text-muted-foreground hover:text-secondary transition-smooth cursor-pointer"
                   >
                     {link.label}
                   </a>

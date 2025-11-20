@@ -77,7 +77,7 @@ const Hero = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-secondary rounded-xl transition-smooth text-lg text-secondary !px-8 h-14 hover:text-white hover:bg-secondary"
+                className="border-2 border-secondary rounded-xl transition-smooth text-lg text-secondary !px-8 h-14 hover:text-white hover:bg-secondary cursor-pointer"
               >
                 <MessageCircle className="ml-2 h-5 w-5" />
                 تحدث مع خبير

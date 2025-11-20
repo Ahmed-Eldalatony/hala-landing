@@ -79,7 +79,7 @@ const Testimonials = () => {
               variant="outline"
               size="icon"
               onClick={prevTestimonial}
-              className="rounded-full  hover:bg-secondary/90 transition-smooth"
+              className="rounded-full hover:bg-secondary/90 transition-smooth cursor-pointer"
             >
               <ChevronRight className="w-5 h-5" />
             </Button>
@@ -87,7 +87,7 @@ const Testimonials = () => {
               variant="outline"
               size="icon"
               onClick={nextTestimonial}
-              className="rounded-full  hover:bg-secondary/90 transition-smooth"
+              className="rounded-full hover:bg-secondary/90 transition-smooth cursor-pointer"
             >
               <ChevronLeft className="w-5 h-5" />
             </Button>

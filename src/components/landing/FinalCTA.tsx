@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button"
-import { MessageCircle } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { MessageCircle } from "lucide-react";
 
 const FinalCTA = () => {
   return (
@@ -21,14 +21,14 @@ const FinalCTA = () => {
             <Button
               variant="secondary"
               size="lg"
-              className="shadow-glow transition-smooth text-lg px-10 h-14"
+              className="shadow-glow rounded-xl transition-smooth text-lg px-10 h-14 cursor-pointer"
             >
               سجّل الآن
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="border-2 border-secondary rounded-xl transition-smooth text-lg text-secondary !px-8 h-14 hover:text-white hover:bg-secondary"
+              className="border-2 border-secondary rounded-xl transition-smooth text-lg text-secondary !px-8 h-14 hover:text-white hover:bg-secondary cursor-pointer"
             >
               <MessageCircle className="ml-2 h-5 w-5" />
               تحدث مع خبير
@@ -37,7 +37,7 @@ const FinalCTA = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default FinalCTA
+export default FinalCTA;
